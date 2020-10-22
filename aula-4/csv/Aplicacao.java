@@ -9,14 +9,14 @@ public class Aplicacao {
         String endereco = "http://repositorio.dados.gov.br/educacao/CADASTRO%20DAS%20IES_2011.csv";
 
         try {
-            URL url1 = new URL(endereco);
+            URL url = new URL(endereco);
             System.out.println("*   Conectando...");
-            URLConnection con = url1.openConnection();
-            con.connect();
-            System.out.println("*   Conectado à : " + url1.getProtocol() + "://" + url1.getHost() + "" + url1.getPath());
+            URLConnection connec = url.openConnection();
+            connec.connecnect();
+            System.out.println("*   Conectado à : " + url.getProtocol() + "://" + url.getHost() + "" + url.getPath());
             FileOutputStream fileout = new FileOutputStream("c:/CadastroIES.csv");
-            System.out.println("*   Baixando " + con.getContentLength() + " bytes");
-            InputStream entrada = con.getInputStream();
+            System.out.println("*   Baixando " + connec.getContentLength() + " bytes");
+            InputStream entrada = connec.getInputStream();
             int buffer = 2048;
             byte[] bytes = new byte[buffer];
             while((download = entrada.read(bytes)) != -1) {  
@@ -26,7 +26,7 @@ public class Aplicacao {
             }
 
             fileout.close();
-            System.out.println("*   Arquivo baixado com sucesso!");
+            System.out.println("*   Arquivo baixado!");
         } catch (IOException e) {
             e.printStackTrace();
         }

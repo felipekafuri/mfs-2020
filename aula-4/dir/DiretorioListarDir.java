@@ -13,12 +13,12 @@ public class DiretorioListarDir{
      */
     public static void main(String[] args) {
         try {
-            Path startPath = Paths.get("c:/");
+            Path path = Paths.get("c:/");
             Files.walkFileTree(startPath, new SimpleFileVisitor<Path>() {
                 @Override
                 public FileVisitResult preVisitDirectory(Path dir,
                         BasicFileAttributes attrs) {
-                    System.out.println("Diretório: " + dir.toString());
+                    System.out.println("Dir: " + dir.toString());
                     return FileVisitResult.CONTINUE;
                 }
 
