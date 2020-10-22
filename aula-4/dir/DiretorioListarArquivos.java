@@ -8,7 +8,7 @@ import java.nio.file.attribute.BasicFileAttributes;
 
 /**
  *
- * @author wesley
+ * @author felipe
  */
 public class DiretorioListarArquivos {
 

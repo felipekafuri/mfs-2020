@@ -12,7 +12,7 @@ import java.io.LineNumberReader;
 
 /**
  *
- * @author wesley
+ * @author felipe
  */
 public class ContaLinhas {
 
