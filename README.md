@@ -1,2 +1,2 @@
-#mfs-2020 UFG professro Altino
+#mfs-2020 UFG professor Altino
 
